@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paperless | The Official BCP Study Website</title>
+    <link rel="shortcut icon" href="images/favicon/favicon-32x32.png" type="image/x-icon">
+<style>
+    /* Style for the iframe container */
+    .iframe-container {
+        position: relative;
+        width: 100%;
+        height: 500px; /* Set initial height */
+    }
+
+    /* Style for the fullscreen button */
+    .fullscreen-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 999;
+    }
+</style>
+</head>
+<body>
+
+<div class="iframe-container">
+    <!-- Add your iframe here -->
+    <iframe id="myIframe" src="https://www.google.com" frameborder="0" allowfullscreen></iframe>
+    <!-- Fullscreen button -->
+    <button class="fullscreen-button" onclick="toggleFullScreen()">Fullscreen</button>
+</div>
+
+<script>
+    function toggleFullScreen() {
+        var iframe = document.getElementById("myIframe");
+        if (!document.fullscreenElement) {
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.mozRequestFullScreen) { /* Firefox */
+                iframe.mozRequestFullScreen();
+            } else if (iframe.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) { /* IE/Edge */
+                iframe.msRequestFullscreen();
+            }
+        } else {
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            } else if (document.mozCancelFullScreen) { /* Firefox */
+                document.mozCancelFullScreen();
+            } else if (document.webkitExitFullscreen) { /* Chrome, Safari & Opera */
+                document.webkitExitFullscreen();
+            } else if (document.msExitFullscreen) { /* IE/Edge */
+                document.msExitFullscreen();
+            }
+        }
+    }
+</script>
+
+</body>
+</html>

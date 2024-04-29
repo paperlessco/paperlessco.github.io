@@ -1,0 +1,37 @@
+body {
+    background-image: url('images/bg.jpg');
+    color: white;
+  }
+h1{
+    font-size: 7rem;
+    vertical-align: baseline;
+    margin-top: 300px;
+    text-align: center;
+}
+.bigtxt-container{
+    vertical-align: baseline;
+}
+h2{
+    text-align: center;
+}
+.rounded-button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #9B59B6;
+    align-items: center;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+  }
+
+  .rounded-button:hover {
+    background-color: #8e44ad;
+  }
+.rounded-button a{
+    text-decoration: none;
+    color: white;
+}
